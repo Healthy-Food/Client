@@ -15,8 +15,27 @@
 
     <!-- Custom styles for this template -->
     <link href="css/4-col-portfolio.css" rel="stylesheet">
+    <style>
+        div.gallery {
+      margin: 5px;
+      border: 1px solid #ccc;
+      float: left;
+      width: 180px;
+  }
+   div.gallery:hover {
+      border: 1px solid #777;
+  }
+   div.gallery img {
+      width: 100%;
+      height: auto;
+  }
+   div.desc {
+      padding: 15px;
+      text-align: center;
+  }
+      </style>
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
-    <script src="./script.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   </head>
 
   <body>
@@ -53,27 +72,20 @@
     <div class="container">
 
       <!-- Page Heading -->
-      <h1 class="my-4">Recently Recipe</h1>
-      <input type="text" id="food" >
+      <h1 class="my-4">Enter Keyword</h1>
+      <input type="text" id="food-query" class="toto">
       
-      
-
       <div id="row">
-        
+        <!-- <button id="add-recipe">aaa</button> -->
       </div>
       <!-- /.row -->
 
          <!-- /.container -->
 
-    <!-- Footer -->
-    <footer class="py-5 bg-dark">
-      <div class="container">
-        <p class="m-0 text-center text-white">Copyright &copy; Your Website 2018</p>
-      </div>
-      <!-- /.container -->
-    </footer>
 
     <!-- Bootstrap core JavaScript -->
+    <script src="./script.js"></script>
+    <script src="./script2.js"></script>
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 

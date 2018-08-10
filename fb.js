@@ -4,15 +4,18 @@
     console.log(response);
   
     if (response.status === 'connected') {
+        localStorage.setItem('tokenFb', response.authResponse.accessToken)
         axios.post('http://localhost:3000/users/loginfb',{
         headers : {
           tokenFb : response.authResponse.accessToken
         }
       })
       .then(data=>{
-        console.log(data)
+        console.log("=======================",data)
+       
       })
-      testAPI();
+      window.location ="http://localhost:8080/search.html"
+      // // testAPI();
     } else {
       document.getElementById('status').innerHTML = 'Please log ' +
         'into this app.';
@@ -37,7 +40,7 @@
   
 
     FB.getLoginStatus(function(response) {
-      statusChangeCallback(response);
+      // statusChangeCallback(response);
     });
 
   };
@@ -61,7 +64,19 @@
   }
 
   function logout(){
-    FB.logout(function(response){
+    // console.log('===============')
+    tokenfb = localStorage.getItem('tokenFb')
+    console.log(tokenfb)
+    if(tokenfb){
+      window.location = "http://localhost:8080/"
+      localStorage.clear()
+      FB.logout(function(response){
         statusChangeCallback(response);
       })
+    }else{
+      localStorage.clear()
+      window.location = "http://localhost:8080/"
+    }
+    
+ 
   }

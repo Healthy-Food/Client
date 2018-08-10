@@ -11,10 +11,10 @@
     <title>Healthy Food</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="healthyFood/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="css/4-col-portfolio.css" rel="stylesheet">
+    <link href="healthyFood/css/4-col-portfolio.css" rel="stylesheet">
     <style>
         div.gallery {
       margin: 5px;
@@ -39,11 +39,11 @@
   </head>
 
   <body>
-
+  
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
       <div class="container">
-        <a class="navbar-brand" href="#">Healthy Food</a>
+        <a class="navbar-brand" href="#">Food & Exercise</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -58,10 +58,10 @@
               <a class="nav-link" href="#">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Services</a>
+              <a class="nav-link" href="http://localhost:8080/sport.html">Exercise</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Contact</a>
+              <a class="nav-link" onclick="logout()" href="#">Log Out</a>
             </li>
           </ul>
         </div>
@@ -74,7 +74,7 @@
       <!-- Page Heading -->
       <h1 class="my-4">Enter Keyword</h1>
       <input type="text" id="food-query" class="toto">
-      
+      <button type="submit" id="btn-search">search</button>
       <div id="row">
         <!-- <button id="add-recipe">aaa</button> -->
       </div>
@@ -83,11 +83,36 @@
          <!-- /.container -->
 
 
+
+
+
+
+    <script>
+    let token = localStorage.getItem('token')
+    let tokenfb = localStorage.getItem('tokenFb')
+    // if(token || tokenfb){
+    //   window.location ="http://localhost:8080/search.html"
+    // }else{
+    //   window.location = "http://localhost:8080"
+    // }
+    
+    </script>
+
+
+
+
+
+
+
     <!-- Bootstrap core JavaScript -->
-    <script src="./script.js"></script>
-    <script src="./script2.js"></script>
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="./healthyFood/script.js"></script>
+    <script src="./healthyFood/script2.js"></script>
+    <script src="./healthyFood/vendor/jquery/jquery.min.js"></script>
+    <script src="./healthyFood/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src ="fb.js"></script>
+
+
+
 
   </body>
 
